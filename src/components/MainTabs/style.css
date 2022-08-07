@@ -1,0 +1,95 @@
+.react-tabs {
+    -webkit-tap-highlight-color: transparent;
+   
+    margin:10px 60px;
+    
+  }
+  
+  .react-tabs__tab-list {
+    border-bottom: 1px solid #aaa;
+    margin: 0 0 10px;
+    padding: 0;
+  }
+  
+  .react-tabs__tab{
+    display: inline-block;
+    border: 1px solid #000;
+    border-bottom: none;
+    bottom: -1px;
+    position: relative;
+    list-style: none;
+    padding: 6px 12px;
+    cursor: pointer;
+    
+  }
+
+  .react-tabs__tab:nth-child(1)
+  {
+    background: #fff;
+    border-radius: 5px 5px 0 0;
+    margin: 2px;
+  }
+  .react-tabs__tab:nth-child(2)
+  {
+    background: rgb(253, 49, 49);
+    color: #fff;
+    border-radius: 5px 5px 0 0;
+    margin: 2px;
+  }
+  .react-tabs__tab:nth-child(3)
+  {
+    background: rgb(145, 112, 177);
+    color: #fff;
+    border-radius: 5px 5px 0 0;
+    margin: 2px;
+  }
+  .react-tabs__tab:nth-child(4)
+  {
+    background: rgb(207, 221, 3);
+    color: #fff;
+    border-radius: 5px 5px 0 0;
+    margin: 2px;
+  }
+  .react-tabs__tab:nth-child(5)
+  {
+    background: blueviolet;
+    color: #fff;
+    border-radius: 5px 5px 0 0;
+    margin: 2px;
+  }
+  
+  .react-tabs__tab--selected {
+    background: #fff;
+    border-color: #aaa;
+    color: black;
+    border-radius: 5px 5px 0 0;
+    border-bottom: 2px solid #000;
+    font-size: bold;
+  }
+  
+  .react-tabs__tab--disabled {
+    color: GrayText;
+    cursor: default;
+  }
+  
+  .react-tabs__tab:focus {
+    outline: none;
+  }
+  
+  .react-tabs__tab:focus:after {
+    content: '';
+    position: absolute;
+    height: 5px;
+    left: -4px;
+    right: -4px;
+    bottom: -5px;
+    
+  }
+  
+  .react-tabs__tab-panel {
+    display: none;
+  }
+  
+  .react-tabs__tab-panel--selected {
+    display: block;
+  }
