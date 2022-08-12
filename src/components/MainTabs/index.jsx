@@ -1,6 +1,7 @@
 
 
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
+import { BodyTable } from '../BodyTable';
 import './style.css';
 
 export const MainTabs = () => (
@@ -11,34 +12,41 @@ export const MainTabs = () => (
       <Tab><span>Di</span></Tab>
       <Tab><span>Supervisão</span></Tab>
       <Tab><span>Montagem</span></Tab>
-      <Tab>Arte</Tab>
+      <Tab>Revisão</Tab>
     </TabList>
 
     <TabPanel>
-      <h2>Conteudo Semana 0</h2>
-      <h2>Conteudo Semana 0</h2>
-      <h2>Conteudo Semana 0</h2>
-      <h2>Conteudo Semana 0</h2>
-      <h2>Conteudo Semana 0</h2>
-      <h2>Conteudo Semana 0</h2>
-      <h2>Conteudo Semana 0</h2>
-      <h2>Conteudo Semana 0</h2>
-      <h2>Conteudo Semana 0</h2>
-      <h2>Conteudo Semana 0</h2>
+      <BodyTable/>
 
      
     </TabPanel>
     <TabPanel>
-      <h2>Conteudo DI</h2>
+      <p>Conteudo DI</p>
+      <p>Conteudo DI</p>
+      <p>Conteudo DI</p>
+      <p>Conteudo DI</p>
+      <p>Conteudo DI</p>
+      <p>Conteudo DI</p>
     </TabPanel>
     <TabPanel>
-      <h2>Conteudo Supervisão</h2>
+      <p>Conteudo Supervisão</p>
+      <p>Conteudo Supervisão</p>
+      <p>Conteudo Supervisão</p>
+      <p>Conteudo Supervisão</p>
     </TabPanel>
     <TabPanel>
-      <h2>Conteudo Montagem</h2>
+      <p>Conteudo Montagem</p>
+      <p>Conteudo Montagem</p>
+      <p>Conteudo Montagem</p>
+      <p>Conteudo Montagem</p>
+      <p>Conteudo Montagem</p>
     </TabPanel>
     <TabPanel>
-      <h2>Conteudo Arte</h2>
+      <p>Conteudo Arte</p>
+      <p>Conteudo Arte</p>
+      <p>Conteudo Arte</p>
+      <p>Conteudo Arte</p>
+      <p>Conteudo Arte</p>
     </TabPanel>
   </Tabs>
   

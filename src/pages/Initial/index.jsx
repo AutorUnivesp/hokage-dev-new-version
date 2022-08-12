@@ -5,9 +5,10 @@ import { MainCollapse } from '../../components/MainCollapse';
 import { Search } from "../../components/Search";
 import { Urgence } from "../../components/Urgence";
 
+// import { useFetch } from "../../hooks/useFetch";
+// import { myHeaderDisc } from '../../api/header';
 import { Container, ContentSearch } from "./style";
-
-
+import { TitleCollapse } from "../../components/TitleCollapse";
 
 export const Initial = () => {
   return (
@@ -19,7 +20,9 @@ export const Initial = () => {
       />
       <Container>
         <Filter filtro="DI" pessoa="Pessoa-Di" />
-        <Filter filtro="Arte" pessoa="Pessoa-Arte" />
+
+        <Filter filtro="Arte" pessoa="Pessoa-Arte"/>
+
         <Filter filtro="Montagem" pessoa="Pessoa-Montagem" />
         <Filter filtro="Supervisor" pessoa="Pessoa-Supervisor" />
         <Filter filtro="Docente" pessoa="Pessoa-Docente" />
@@ -30,7 +33,7 @@ export const Initial = () => {
         <Search />
         <Urgence />
       </ContentSearch>
-      
+      <TitleCollapse/>
       <MainCollapse />
     </>
   );

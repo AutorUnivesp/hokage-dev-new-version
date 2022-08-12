@@ -7,7 +7,7 @@ export const Dashboard = () => {
       <Header
       title="MEU DASHBOARD"
       local="Home"
-      direction={"/index"}
+      direction={"/hokage/index"}
       />
     </>
   )

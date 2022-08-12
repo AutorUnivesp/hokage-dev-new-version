@@ -15,5 +15,6 @@ p{
   margin-left: 5px;
   color:#fff;
   font-size:16px;
+  cursor:pointer
 }
 `

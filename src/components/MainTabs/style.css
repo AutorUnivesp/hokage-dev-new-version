@@ -3,12 +3,14 @@
    
     margin:10px 60px;
     
+    
   }
   
   .react-tabs__tab-list {
     border-bottom: 1px solid #aaa;
     margin: 0 0 10px;
     padding: 0;
+    
   }
   
   .react-tabs__tab{
@@ -20,6 +22,8 @@
     list-style: none;
     padding: 6px 12px;
     cursor: pointer;
+    text-align: center;
+    
     
   }
 
@@ -28,6 +32,7 @@
     background: #fff;
     border-radius: 5px 5px 0 0;
     margin: 2px;
+    text-align: center;
   }
   .react-tabs__tab:nth-child(2)
   {
@@ -35,6 +40,7 @@
     color: #fff;
     border-radius: 5px 5px 0 0;
     margin: 2px;
+    text-align: center;
   }
   .react-tabs__tab:nth-child(3)
   {
@@ -42,6 +48,7 @@
     color: #fff;
     border-radius: 5px 5px 0 0;
     margin: 2px;
+    text-align: center;
   }
   .react-tabs__tab:nth-child(4)
   {
@@ -49,6 +56,7 @@
     color: #fff;
     border-radius: 5px 5px 0 0;
     margin: 2px;
+    text-align: center;
   }
   .react-tabs__tab:nth-child(5)
   {
@@ -56,6 +64,7 @@
     color: #fff;
     border-radius: 5px 5px 0 0;
     margin: 2px;
+    text-align: center;
   }
   
   .react-tabs__tab--selected {

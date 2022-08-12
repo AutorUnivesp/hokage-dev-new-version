@@ -1,5 +1,5 @@
 import { useState} from 'react';
-import { Link, Navigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { login } from '../../api/api.js';
 import './login.css';
 import { history } from '../../routes/history.js';
