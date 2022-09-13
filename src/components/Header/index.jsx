@@ -4,7 +4,7 @@ import { UserData } from "../UserData";
 import { Container, LeftSide } from "./style";
 
 
-export const Header = ({title, local, direction}) => {
+export const Header = ({title, local, direction, user}) => {
 
   return(
     <>
@@ -13,7 +13,7 @@ export const Header = ({title, local, direction}) => {
         <LeftSide>
           <Link to={direction}><h3>{local}</h3></Link>
           <Bell/>
-          <UserData/>
+          <UserData user={user}/>
           <Link to="/"><h3><span>|</span>Sair</h3></Link>
   </LeftSide>
       </Container>

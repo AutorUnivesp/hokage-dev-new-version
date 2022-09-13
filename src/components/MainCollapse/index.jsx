@@ -8,10 +8,16 @@ import { MainTabs } from '../MainTabs';
 import { Container } from './style';
 
 import { HeaderTable } from '../HeaderTable';
+import { useFetch } from '../../hooks/useFetch';
+import { myHeaderDisc } from "../../api/header"
+import { useEffect, useState } from 'react';
 
-export const MainCollapse = () => {
 
+export const MainCollapse = (props) => {
+   const idUser = localStorage.id;
+   const equipeUser = localStorage.equipe;     
   return (
+    <>    
     <div>
       <Container>
       <Accordion>
@@ -21,16 +27,33 @@ export const MainCollapse = () => {
           id="panel1a-header"
         >
         <Typography>
-         <HeaderTable/>         
+         <HeaderTable
+         id={props.id} 
+         sigla={props.sigla} 
+         nome={props.nome}  
+         fotoMontagem={props.fotoMontagem}
+         fotoDi={props.fotoDi}
+         fotoArte={props.fotoArte}
+         fotoRevisao={props.fotoRevisao}
+         nomeDocente={props.nomeDocente}
+         cargaHoraria={props.carga_horaria}
+         />         
         </Typography>
         </AccordionSummary>
         <AccordionDetails>
           <Typography>
-            <MainTabs/>
+            <MainTabs
+            equipe='DI' 
+            etapa='Semana 0' 
+            user={props.user}
+            />
           </Typography>
         </AccordionDetails>
       </Accordion>
       </Container>
     </div>
+    
+    </>
+  
    )
 }

@@ -1,53 +1,28 @@
 
-
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import { BodyTable } from '../BodyTable';
 import './style.css';
 
-export const MainTabs = () => (
+export const MainTabs = (props) => {
+    
+return(
   
   <Tabs>
+    
     <TabList>
-      <Tab><span>Semana 0 </span></Tab>
-      <Tab><span>Di</span></Tab>
-      <Tab><span>Supervisão</span></Tab>
-      <Tab><span>Montagem</span></Tab>
-      <Tab>Revisão</Tab>
+      <Tab><span>{props.etapa}</span></Tab>
+      <Tab><span>{props.equipe}</span></Tab>
     </TabList>
 
     <TabPanel>
-      <BodyTable/>
+      <BodyTable/>     
+    </TabPanel>
 
-     
-    </TabPanel>
     <TabPanel>
-      <p>Conteudo DI</p>
-      <p>Conteudo DI</p>
-      <p>Conteudo DI</p>
-      <p>Conteudo DI</p>
-      <p>Conteudo DI</p>
-      <p>Conteudo DI</p>
+      <BodyTable/>     
     </TabPanel>
-    <TabPanel>
-      <p>Conteudo Supervisão</p>
-      <p>Conteudo Supervisão</p>
-      <p>Conteudo Supervisão</p>
-      <p>Conteudo Supervisão</p>
-    </TabPanel>
-    <TabPanel>
-      <p>Conteudo Montagem</p>
-      <p>Conteudo Montagem</p>
-      <p>Conteudo Montagem</p>
-      <p>Conteudo Montagem</p>
-      <p>Conteudo Montagem</p>
-    </TabPanel>
-    <TabPanel>
-      <p>Conteudo Arte</p>
-      <p>Conteudo Arte</p>
-      <p>Conteudo Arte</p>
-      <p>Conteudo Arte</p>
-      <p>Conteudo Arte</p>
-    </TabPanel>
+
+    
   </Tabs>
   
-);
+)};

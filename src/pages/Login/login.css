@@ -45,6 +45,7 @@ form{
 }
 
 .form-bottom input{
+  display: flex;
   margin-bottom: 1em;
   width: 90%;
   height: 50px;

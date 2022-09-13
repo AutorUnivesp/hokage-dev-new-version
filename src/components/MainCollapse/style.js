@@ -3,7 +3,7 @@ import styled from "styled-components";
 
 export const Container = styled.div`
 
-margin:100px 40px;
+margin:10px 40px;
 .nameDisciplina {
     margin-left: 70px;
     display: flex;

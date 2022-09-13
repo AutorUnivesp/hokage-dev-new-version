@@ -8,9 +8,9 @@ import DefaultImg from "../../assets/avatar.png"
 
 
 
-export const UserData = () => {
+export const UserData = ({user}) => {
   const [userDataInfo, setUserDataInfo] = useState(false)
-  const userId = localStorage.id  
+  const userId = user 
 
   const urlUsuariosCurrent = "https://assets.univesp.br/hokage/usuarios/" + userId +"/"
   const {data: currentUser} = useFetch(urlUsuariosCurrent, myHeaderDisc)
@@ -19,13 +19,8 @@ export const UserData = () => {
 
   const handleUserData = () => {
     if(userDataInfo === true){
-      return(
-        <div>
-          <h1>ola</h1>
-        </div>
-      )
-    }
-    
+      return;
+    }    
     setUserDataInfo(!userDataInfo)
   }
 

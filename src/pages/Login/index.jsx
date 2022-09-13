@@ -1,8 +1,8 @@
-import { useState} from 'react';
+import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { login } from '../../api/api.js';
 import './login.css';
-import { history } from '../../routes/history.js';
+import {history} from '../../routes/history.js';
 import { toast } from 'react-toastify';
 import { AiOutlineEye } from "react-icons/ai";
 
@@ -13,8 +13,14 @@ export const Login = () => {
   const [loading, setLoading] = useState(false);
   const [showPassword, setShowPassword] = useState(false);
 
-  const userToken = localStorage.getItem("accessToken");
-   userToken && history.push('/hokage/index');
+  // Não permitindo usuários logados acessarem o login
+  useEffect(()=>{
+    let userToken = localStorage.getItem("accessToken");
+
+    if(userToken){
+      history.push('/hokage/index');
+    }
+  },[])
 
   async function handleSubmit(e){
     e.preventDefault();
@@ -25,7 +31,6 @@ export const Login = () => {
          await login(email, password);
        }
        await signin();
-       
 
        //determinando intervalo para redirecionamento pro index depois de logado
        let intervalo = setInterval(function(){
@@ -36,7 +41,6 @@ export const Login = () => {
        setTimeout(function(){
          clearInterval(intervalo);
        }, 7000);
-       
 
     }else{
       toast.error("Preencha todos os campos.");
@@ -47,7 +51,7 @@ export const Login = () => {
   function togglePassword(){
     setShowPassword(!showPassword);
   }
-
+  
 
   return(
     <div className="login-body">
@@ -58,25 +62,24 @@ export const Login = () => {
       </div>
 
       <div className="form-bottom">
-      <form>
 
-        {/* <form onSubmit={handleSubmit}> */}
+        <form onSubmit={ handleSubmit }>
           <input type="email" placeholder="digite seu email" value={email} onChange={(e) => setEmail(e.target.value)}/>
 
           <input type={showPassword ? "text" : "password"} placeholder="digite sua senha" value={password} onChange={(e) => setPassword(e.target.value)}/>
 
           <AiOutlineEye onClick={togglePassword} size={22} title={showPassword ? "esconder senha" : "mostrar senha"} />
+          
 
-
-          <button type="submit" className="login-button" onClick={handleSubmit}>{loading ? 'Carregando...' : 'Logar!'}</button>
-
-
+          <button type="submit" className="login-button">{loading ? 'Carregando...' : 'Logar!'}</button>
+          
+          
         </form>
 
         <Link className="change-password" to="/">Precisa trocar a senha? Clique aqui.</Link>
 
       </div>
-
+      
     </div>
   );
-  }
+}

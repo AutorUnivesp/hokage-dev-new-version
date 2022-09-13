@@ -68,11 +68,12 @@ export const login = (email, senha)=>{
       if(response.ok){
         return response.json()
       }}).then((jsondata) => {
+            console.log(jsondata);
             localStorage.setItem('accessToken','Bearer ' + jsondata.accessToken);
             localStorage.setItem('id', jsondata.id);
             localStorage.setItem('userName', jsondata.username);
             localStorage.setItem('email', jsondata.email);
-            localStorage.setItem('role', jsondata.roles[0]);
+            localStorage.setItem('equipe', jsondata.equipe);
           }).catch(function(err) {
               toast.error("seus dados estão incorretos.");
               return (err)

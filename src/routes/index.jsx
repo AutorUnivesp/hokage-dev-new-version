@@ -9,8 +9,8 @@ import {history} from './history.js';
 
 export default function RoutesDefalt(){
   return(
-    <BrowserRouter>
-      <Routes history = {history}>
+    <BrowserRouter history = {history}>
+      <Routes>
         <Route exact path="/hokage" element={<Login />} />
         <Route exact path="/hokage/index" element={<Initial/>} />
         <Route exact path="/hokage/dashboard" element={<Dashboard/>} />

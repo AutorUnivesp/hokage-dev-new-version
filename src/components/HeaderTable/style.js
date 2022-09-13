@@ -14,19 +14,23 @@ span, strong{
 `
 
 export const ContentCollapsetitle = styled.div`
+width:500px;
 display:inline-block;
 align-items:center;
-margin-right:500px;
+font-size:14px;
+margin-right:20px;
+
 `
 
 export const ContentCollapseImage = styled.div`
 display:inline-block;
 align-items:center;
-margin-right:75px;
+margin-right:px;
+font-size:13px;
 img{
     margin: 0 5px;
-    width:30px;
-    height:30px;
+    width:25px;
+    height:25px;
     border-radius:25px;
     margin-bottom:-7px;
 }
@@ -35,7 +39,8 @@ img{
 export const ContentCollapseData = styled.div`
 display:inline-block;
 align-items:center;
-margin: 0 25px;
+font-size:13px;
+font-weight:bold;
 span{
     margin:0 35px;
 }
